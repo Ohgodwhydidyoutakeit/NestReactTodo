@@ -1,11 +1,15 @@
 
-import { Connection } from 'mongoose';
-import { TaskSchema } from '../schemas/task.schema';
+import { Connection, Mongoose } from 'mongoose';
+import { TaskSchema } from '../schemas/tasks/task.schema';
 
 export const taskProvider = [
     {
         provide: 'TASK_MODEL',
-        useFactory: (connection: Connection) => connection.model('Tasks', TaskSchema),
+        useFactory: (mongoose: Mongoose) => {
+
+            return mongoose.model('Task', TaskSchema)
+
+        },
         inject: ['MONGODB_CONNECTION'],
     },
 ];

@@ -19,7 +19,8 @@ export class LoggerSrv implements LoggerService {
     constructor() {
         this.logger = winston.createLogger({
             transports: [
-                transport
+                transport,
+                new winston.transports.Console(),
             ],
         });
     }
