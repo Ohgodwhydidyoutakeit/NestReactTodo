@@ -1,0 +1,24 @@
+@import "../../../__variables";
+
+.eui-effort-link {
+    display: block;
+    width: 1.5rem;
+    height: 12px;
+    background-color: $iris;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0.45rem;
+    border-bottom-right-radius: 0.45rem;
+    border-bottom-left-radius: 1.5rem;
+
+    &--priority-high {
+        background-color: $todo-red;
+    }
+
+    &--priority-medium {
+        background-color: $todo-yellow;
+    }
+
+    &--priority-low {
+        background-color: $todo-blue;
+    }
+}
