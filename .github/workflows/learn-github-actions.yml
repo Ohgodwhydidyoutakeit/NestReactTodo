@@ -1,13 +1,16 @@
-name: learn-github-actions
-run-name: ${{ github.actor }} is learning GitHub Actions
+name: Test runner
+run-name: ${{ github.repository }} running test
 on: [push]
+
 jobs:
-  check-bats-version:
+  test-be:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v3
+      - name: Use Node.js
+        uses: actions/setup-node@v3
         with:
-          node-version: '14'
-      - run: npm install -g bats
-      - run: bats -v
+          node-version: "20.x"
+      - run: cd ./be-todo
+      - run: yarn
+      - run: yarn run test
