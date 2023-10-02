@@ -1,9 +1,9 @@
 name: Test runner
 run-name: ${{ github.repository }} running test
-on: [push]
-  # push:
-  #   branches:
-  #     - master
+on:
+  push:
+    branches:
+      - master
 
 jobs:
   test-be:
@@ -19,5 +19,4 @@ jobs:
           node-version: "20.x"
       - name: Install dependencies
         run: yarn --frozen-lockfile
-      - run: yarn install
       - run: yarn run test
