@@ -3,7 +3,7 @@ import * as mongoose from 'mongoose';
 
 export const TaskSchema: mongoose.Schema = new mongoose.Schema({
   customId: {
-    type: String,
+    type: Number,
     unique: true,
     required: true,
   },
