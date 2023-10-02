@@ -1,8 +1,7 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+
 import { EffortLink } from './EffortLink.component';
+import { render } from '@testing-library/react';
 
 it('renders without crashing', () => {
-    const div = document.createElement('div');
-    ReactDOM.render(<EffortLink />, div);
+    render(<EffortLink />);
 });

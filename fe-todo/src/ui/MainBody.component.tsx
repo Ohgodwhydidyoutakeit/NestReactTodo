@@ -1,9 +1,12 @@
 import { FC } from "react";
-
+import { DueDate } from "../components/due-date/DueDate.component";
+import { WeekDays } from "../components/domain/WeekDays.enum";
+import { Priority } from "../components/domain/Priority.enum";
+import './MainBody.component.scss'
 
 
 export const MainBody: FC = () => {
-    return <div>
-        main body for now - so that i can see something
+    return <div className="container">
+        <DueDate weekday={WeekDays.FRIDAY} priority={Priority.LOW} />
     </div>
 }
