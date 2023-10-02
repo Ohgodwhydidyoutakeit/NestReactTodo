@@ -28,7 +28,7 @@ export class TasksController {
 
     }
     @Get("/all")
-    getAll() {
+    findAll() {
         return this.taskService.findAll()
     }
 }
