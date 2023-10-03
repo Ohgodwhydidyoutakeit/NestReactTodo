@@ -1,5 +1,10 @@
-@import url("https://fonts.cdnfonts.com/css/sf-pro-display");
+@use "./_variables.scss";
+
+@import url('https://fonts.cdnfonts.com/css/sf-pro-display');
 
 .App {
-  font-family: "SF Pro Display", sans-serif;
+    font-family: 'SF Pro Display', sans-serif;
+    display: flex;
+    justify-content: center;
+    height: 100%;
 }

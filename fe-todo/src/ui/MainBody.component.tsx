@@ -4,6 +4,7 @@ import { WeekDays } from "../components/domain/WeekDays.enum";
 import { Priority } from "../components/domain/Priority.enum";
 import "./MainBody.component.scss";
 import { EffortLink } from "../components/effort-links/EffortLink.component";
+import { InputCard } from "../components/input-card/InputCard.component";
 
 export const MainBody: FC = () => {
   return (
