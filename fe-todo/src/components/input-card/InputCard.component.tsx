@@ -11,8 +11,9 @@ export const InputCard: FC = () => {
         <div className="card-container">
             <input className="card-container__input" type="text"></input>
             <div className="card-container__selectors">
-               
+                
             </div>
         </div>
     )
 }
+
