@@ -1,0 +1,11 @@
+@import "../../_variables";
+
+.confirmButton-container {
+    background-color: $iris;
+    font-family: $font-family-default;
+    padding: 2rem;
+    font-size: 2rem;
+    border: 3px solid $todo-blue;
+    border-radius: 1rem;
+    color: $system_default_white;
+}
