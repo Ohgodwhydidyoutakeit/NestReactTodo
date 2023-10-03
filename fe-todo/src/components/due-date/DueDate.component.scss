@@ -1,25 +1,25 @@
 @import "../../../__variables";
 
 .eui-due-container {
-    all: unset;
-    font-family: 'SF Pro Display', sans-serif;
-    padding: 0.5rem;
-    border-radius: 0.5rem;
-    color: $system_default_white;
-    font-weight: 600;
-    font-size: 1rem;
-    text-align: center;
-    background-color: $iris;
+  all: unset;
+  font-family: "SF Pro Display", sans-serif;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  color: $system_default_white;
+  font-weight: 600;
+  font-size: 1rem;
+  text-align: center;
+  background-color: $iris;
 
-    &--priority-high {
-        background-color: $todo-red;
-    }
+  &--priority-high {
+    background-color: $todo-red;
+  }
 
-    &--priority-medium {
-        background-color: $todo-yellow;
-    }
+  &--priority-medium {
+    background-color: $todo-yellow;
+  }
 
-    &--priority-low {
-        background-color: $todo-blue;
-    }
+  &--priority-low {
+    background-color: $todo-blue;
+  }
 }

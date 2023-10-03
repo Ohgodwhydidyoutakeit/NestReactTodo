@@ -45,5 +45,6 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Will be using this design for fe 
-[Figma](https://www.figma.com/file/rNIK6pjUIj6NbUHKsVquFU/To-Do-List-Kanban-(Community)?type=design&mode=design&t=j3aNQ2ThOAZ44z3V-0)
+### Will be using this design for fe
+
+[Figma](<https://www.figma.com/file/rNIK6pjUIj6NbUHKsVquFU/To-Do-List-Kanban-(Community)?type=design&mode=design&t=j3aNQ2ThOAZ44z3V-0>)

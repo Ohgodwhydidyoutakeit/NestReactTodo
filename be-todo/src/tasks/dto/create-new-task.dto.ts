@@ -1,5 +1,3 @@
-
-
 export interface CreateNewTaskDto {
-    content: string,
+  content: string;
 }

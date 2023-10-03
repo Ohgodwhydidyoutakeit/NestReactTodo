@@ -1,4 +1,3 @@
-
 import * as mongoose from 'mongoose';
 
 export const TaskSchema: mongoose.Schema = new mongoose.Schema({
@@ -9,10 +8,10 @@ export const TaskSchema: mongoose.Schema = new mongoose.Schema({
   },
   content: {
     type: String,
-    reqired: true
+    reqired: true,
   },
   isDone: {
     type: Boolean,
-    required: true
-  }
+    required: true,
+  },
 });

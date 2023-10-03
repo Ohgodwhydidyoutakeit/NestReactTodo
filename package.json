@@ -1,0 +1,24 @@
+{
+  "name": "nestreacttodo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:Ohgodwhydidyoutakeit/NestReactTodo.git",
+  "author": "Ohgodwhydidyoutakeit <w.lipowski97@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "lint": "prettier --check .",
+    "format": "prettier --write ."
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*": "prettier --write"
+  },
+  "devDependencies": {
+    "husky": "^8.0.3",
+    "prettier": "^3.0.3"
+  }
+}

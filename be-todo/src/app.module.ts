@@ -9,16 +9,9 @@ import { DatabaseModule } from './database/database.module';
 import { LoggerModule } from './logger/logger.module';
 import { LoggerMiddleware } from './logger/logger.middleware';
 
-
 @Module({
-  imports: [
-
-    TasksModule,
-    DatabaseModule,
-    LoggerModule,
-  ],
+  imports: [TasksModule, DatabaseModule, LoggerModule],
   controllers: [AppController],
-  providers: [AppService,],
+  providers: [AppService],
 })
-export class AppModule {
-}
+export class AppModule {}

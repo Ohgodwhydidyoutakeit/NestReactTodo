@@ -7,7 +7,6 @@ import { taskProvider } from './task.provider';
 @Module({
   imports: [DatabaseModule],
   controllers: [TasksController],
-  providers: [TaskService, ...taskProvider]
-
+  providers: [TaskService, ...taskProvider],
 })
-export class TasksModule { }
+export class TasksModule {}
