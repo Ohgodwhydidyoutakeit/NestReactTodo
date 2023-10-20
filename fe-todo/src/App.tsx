@@ -10,8 +10,6 @@ function App() {
       <EditArea />
       <MainBody />
       <DeleteArea />
-
-
     </div>
   );
 }

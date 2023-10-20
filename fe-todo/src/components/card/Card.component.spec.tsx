@@ -1,7 +1,6 @@
+import { render } from "@testing-library/react";
+import { Card } from "./Card.component";
 
-import { render } from '@testing-library/react';
-import { Card } from './Card.component'
-
-it('renders without crashing', () => {
-    render(<Card />)
+it("renders without crashing", () => {
+  render(<Card />);
 });

@@ -1,13 +1,13 @@
 {
-    "en": {
-        "translation": {
-            "header": "To-Do List",
-            "edit": "Drag here to edit",
-            "delete": "Drag here to delete",
-            "components": {
-                "input-placeholder": "placeholder",
-                "confirm-button.text": "Confirm"
-            }
-        }
+  "en": {
+    "translation": {
+      "header": "To-Do List",
+      "edit": "Drag here to edit",
+      "delete": "Drag here to delete",
+      "components": {
+        "input-placeholder": "placeholder",
+        "confirm-button.text": "Confirm"
+      }
     }
+  }
 }

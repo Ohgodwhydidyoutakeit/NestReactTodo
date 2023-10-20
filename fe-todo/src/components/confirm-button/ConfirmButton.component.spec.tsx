@@ -1,8 +1,9 @@
+import { ConfirmButton } from "./ConfirmButton.component";
+import { render } from "@testing-library/react";
 
-import { ConfirmButton } from './ConfirmButton.component';
-import { render } from '@testing-library/react';
-
-
-it('renders without crashing', () => {
-    render(<ConfirmButton text='test' />);
+describe("ConfirmButton", () => {
+  const handleClick = jest.fn();
+  it("renders without crashing", () => {
+    render(<ConfirmButton text="test" onClick={handleClick} />);
+  });
 });

@@ -1,18 +1,16 @@
-@import '../../_variables';
+@import "../../_variables";
 .custom-input {
+  font-family: "SF Pro Display", sans-serif;
+  border: 2px solid $blue;
+  border-radius: 1rem;
+  font-weight: 700;
+  background-color: $system_default_white;
+  height: 4rem;
+  margin: 1rem;
+  font-size: 3rem;
+  padding: 1rem;
 
-    font-family: 'SF Pro Display', sans-serif;
-    border: 2px solid $blue;
-    border-radius: 1rem;
-    font-weight: 700;
-    background-color: $system_default_white;
-    height: 4rem;
-    margin: 1rem;
-    font-size: 3rem;
-    padding: 1rem;
-
-    &:focus {
-        outline: none;
-    }
-
+  &:focus {
+    outline: none;
+  }
 }

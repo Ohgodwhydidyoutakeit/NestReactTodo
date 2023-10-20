@@ -1,16 +1,10 @@
 import { FC, ReactNode } from "react";
-import './Card.component.scss'
-
+import "./Card.component.scss";
 
 interface ICardProps {
-    children?: ReactNode
+  children?: ReactNode;
 }
 
 export const Card: FC<ICardProps> = ({ children }: ICardProps) => {
-    return (
-        <div className="card-container">
-            {children}
-        </div>
-    )
-}
-
+  return <div className="card-container">{children}</div>;
+};

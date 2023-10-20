@@ -1,13 +1,17 @@
 import { FC } from "react";
 
-import './ConfirmButton.component.scss'
-
+import "./ConfirmButton.component.scss";
 
 interface IConfirmButtonProps {
-    text: string
+  text: string;
+  onClick: () => void;
 }
-export const ConfirmButton: FC<IConfirmButtonProps> = (props: IConfirmButtonProps) => {
-    return (
-        <button className="confirmButton-container">{props.text}</button>
-    )
-}
+export const ConfirmButton: FC<IConfirmButtonProps> = (
+  props: IConfirmButtonProps,
+) => {
+  return (
+    <button className="confirmButton-container" onClick={props.onClick}>
+      {props.text}
+    </button>
+  );
+};
