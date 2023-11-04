@@ -15,6 +15,7 @@ interface IInputProp {
   value: string;
   forwardedRef: RefObject<HTMLInputElement>;
 }
+
 export const Input: FC<IInputProp> = forwardRef<HTMLInputElement, IInputProp>(
   (props: IInputProp, ref) => {
     const changing = (e: React.ChangeEvent<HTMLInputElement>) => {

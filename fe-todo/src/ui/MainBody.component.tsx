@@ -1,4 +1,4 @@
-import { FC, RefObject, useEffect, useRef, useState } from "react";
+import { FC, RefObject, createRef, useEffect, useRef, useState } from "react";
 import { DueDate } from "../components/due-date/DueDate.component";
 import { WeekDays } from "../components/domain/WeekDays.enum";
 import { Priority } from "../components/domain/Priority.enum";
@@ -12,11 +12,13 @@ import { ConfirmButton } from "../components/confirm-button/ConfirmButton.compon
 import { useAppDispatch } from "../store/hooks";
 import { add } from "../store/todos/todosSlice";
 import { CurrentTodosContainer } from "../containers/current-todos/CurrentTodos.container";
+import Draggable from "react-draggable";
 
 export const MainBody: FC = () => {
   const [input, setInput] = useState<string>("");
   const inputRef: RefObject<HTMLInputElement> = useRef(null);
   const dispatch = useAppDispatch();
+
 
   const changeButton = () => {
     throw new Error("toBe implemented");
@@ -56,7 +58,9 @@ export const MainBody: FC = () => {
           onClick={handleSubmit}
         />
       </Card>
+
       <CurrentTodosContainer />
+
     </div>
   );
 };

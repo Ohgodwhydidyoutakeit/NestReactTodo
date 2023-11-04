@@ -6,5 +6,13 @@ interface ICardProps {
 }
 
 export const Card: FC<ICardProps> = ({ children }: ICardProps) => {
-  return <div className="card-container">{children}</div>;
+  // card has children and 2 buttons 
+  return (
+    <div className="card-container">
+      <span>{"<"}</span>
+      {children}
+      <span>{">"}</span>
+    </div>
+
+  )
 };
