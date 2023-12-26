@@ -6,6 +6,7 @@ import * as express from 'express';
 import { ExpressAdapter } from '@nestjs/platform-express';
 
 import * as https from 'https';
+import { SwaggerDocsModule } from './swagger/swagger-doc.module';
 
 const httpsOptions = {
   key: fs.readFileSync(process.cwd() + '/certificates/localhost.key'),
@@ -17,9 +18,12 @@ async function bootstrap() {
     const server = express();
     const app = await NestFactory.create(AppModule, new ExpressAdapter(server));
 
+
+    SwaggerDocsModule.forRoot(app)
+
     await app.init();
 
-    const httpsServer = https
+    https
       .createServer(httpsOptions, server)
       .listen(process.env.APP_PORT || environment.port);
 

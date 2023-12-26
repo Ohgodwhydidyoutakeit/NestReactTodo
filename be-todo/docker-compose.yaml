@@ -3,6 +3,7 @@ version: '3.1'
 
 services:
   mongo-db:
+    container_name: mongo-db
     image: mongo
     restart: always
     ports:
@@ -10,3 +11,56 @@ services:
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: example
+
+  nginx:
+    image: nginx:latest
+    container_name: ngnix
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./docker/ngnix/ngnix.conf:/etc/nginx/nginx.conf:ro  # Mount custom NGINX configuration
+      # - ./certs:/etc/nginx/certs:ro  # Mount SSL certificates if needed
+
+  nginx-exporter:
+    container_name: nginx-exporter
+    image: nginx/nginx-prometheus-exporter:latest
+    ports:
+      - "9113:9113"
+    environment:
+      - NGINX_SCRAPE_URI=http://localhost/nginx_status
+    depends_on:
+      - nginx
+
+  prometheus:
+    container_name: prometheus
+    image: prom/prometheus:latest
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./docker/prometheus/:/etc/prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+    depends_on:
+      - nginx-exporter
+
+  grafana:
+    container_name: grafana
+    image: grafana/grafana:latest
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin  # Change this password
+    depends_on:
+      - nginx
+
+  app:
+    container_name: nest-app
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - "${APP_PORT:-3005}:${APP_PORT:-3005}"  
+    environment:
+      - NODE_ENV=production
+      - APP_PORT=3005
