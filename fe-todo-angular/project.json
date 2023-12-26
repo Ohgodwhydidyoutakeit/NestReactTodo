@@ -61,7 +61,9 @@
         "development": {
           "optimization": false,
           "extractLicenses": false,
-          "sourceMap": true
+          "sourceMap": true,
+          "ssr": false,
+          "prerender": false
         }
       },
       "defaultConfiguration": "production"
@@ -81,6 +83,7 @@
       },
       "defaultConfiguration": "development"
     },
+    
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
