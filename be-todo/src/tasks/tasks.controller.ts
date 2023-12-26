@@ -3,14 +3,13 @@ import { TaskService } from './tasks.service';
 import { CreateNewTaskDto, ICreateNewTaskDto } from './dto/create-new-task.dto';
 import { IUpdateTaskDto, UpdateTaskDto } from './dto/update-task.dto';
 import { ApiBody, ApiOperation, ApiParam, ApiResponse, ApiTags } from '@nestjs/swagger';
-import { PrometheusService } from 'src/prometheus/prometheus.service';
 
 
 @ApiTags('Tasks')
 @Controller('tasks')
 
 export class TasksController {
-  constructor(private readonly taskService: TaskService, private readonly prometheusService: PrometheusService) { }
+  constructor(private readonly taskService: TaskService) { }
 
   @Post('/create')
   @ApiOperation({ summary: 'Create a new task' })
@@ -41,7 +40,6 @@ export class TasksController {
   @ApiOperation({ summary: 'Retrieve all tasks' })
   @ApiResponse({ status: 200, description: 'List of all tasks.' })
   findAll() {
-    this.prometheusService.incrementRequestCounter();
     return this.taskService.findAll();
   }
 }
