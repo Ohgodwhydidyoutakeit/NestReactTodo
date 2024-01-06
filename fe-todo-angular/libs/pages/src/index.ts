@@ -1,1 +1,1 @@
-export * from './lib/main-page/main-page.component';
+export * from './lib/pages/pages.component';

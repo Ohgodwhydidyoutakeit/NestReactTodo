@@ -15,7 +15,10 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@fe-todo-angular/main-page": ["libs/pages/src/index.ts"]
+      "@fe-todo-angular/pages": ["libs/pages/src/index.ts"],
+      "@fe-todo-angular/services": ["libs/services/src/index.ts"],
+      "@fe-todo-angular/store": ["libs/store/src/index.ts"],
+
     }
   },
   "exclude": ["node_modules", "tmp"]
